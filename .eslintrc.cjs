@@ -1,16 +1,16 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'es2021': true,
+    env: {
+        browser: true,
+        es2021: true
     },
-    'extends': 'google',
-    'overrides': [
-    ],
-    'parserOptions': {
-        'ecmaVersion': 'latest',
-        'sourceType': 'module',
+    extends: 'google',
+    overrides: [],
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module'
     },
-    'rules': {
-        'indent': ['error', 4],
+    rules: {
+        indent: ['error', 4]
     },
+    extends: ['prettier']
 };

@@ -11,4 +11,4 @@ function countHours(year, holidays) {
     return validDates.length * 2;
 }
 
-export {countHours};
+export { countHours };

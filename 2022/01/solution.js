@@ -9,4 +9,4 @@ function wrapping(gifts) {
     });
 }
 
-export {wrapping};
+export { wrapping };
