@@ -4,15 +4,12 @@
  * @return {string}
  */
 function getCompleted(part, total) {
-    const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
-    const toNumber = (t) => {
-        const [h, m, s] = t.split(':').map((e) => e * 1);
-        return h * 3600 + m * 60 + s;
-    };
-    const tPart = toNumber(part);
-    const tTotal = toNumber(total);
-    const g = gcd(tPart, tTotal);
-    return `${tPart / g}/${tTotal / g}`;
+    const getGcd = (a, b) => (b === 0 ? a : getGcd(b, a % b));
+    const toSeconds = (t) => t.split(':').reduce((a, v) => a * 60 + v * 1);
+    const tPart = toSeconds(part);
+    const tTotal = toSeconds(total);
+    const gcd = getGcd(tPart, tTotal);
+    return `${tPart / gcd}/${tTotal / gcd}`;
 }
 
 export { getCompleted };
